@@ -7,3 +7,10 @@ snaplex:
 ========
 
 https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/1437953/Snaplex
+
+
+snaplogic tutorials
+===================
+
+https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/1438341/Getting+Started+with+SnapLogic
+
