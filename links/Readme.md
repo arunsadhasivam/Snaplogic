@@ -20,3 +20,10 @@ sample files or data:
 
 
 https://docs-snaplogic.atlassian.net/wiki/discover/all-updates
+
+
+Use Cases:
+==========
+
+https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/1438862/Use+Case+Examples
+
