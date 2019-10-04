@@ -1,20 +1,44 @@
 input:
 =======
 
- {
-        "userId": 1,
-        "id": 4,
-        "title": "Anto",
-        "completed": true,
-        "employee": [
-            {
-                "first_name": "test2",
-                "last_name": "last2",
-                "age": 32
-            }
-        ]
-    },
+ test1.json
+ ----------
     
+    {
+           "userId": 1,
+           "id": 4,
+           "title": "Anto",
+           "completed": true,
+           "employee": [
+               {
+                   "first_name": "test2",
+                   "last_name": "last2",
+                   "age": 32
+               }
+           ]
+       },
+
+
+  test2.json:
+  -----------
+  
+    {
+            "userId": 1,
+            "id": 4,
+            "title": "Binu",
+            "completed": true,
+            "employee": [
+                {
+                    "first_name": "test2",
+                    "last_name": "last2",
+                    "age": 32
+                }
+            ]
+        },
+
+
+  
+  
     
     snap design:
     =============
@@ -43,19 +67,19 @@ input:
 output of file writer:
 ======================
 
-{
-    "name": "{userId=1, id=1, title=Anto, completed=false, employee=[{first_name=test2, last_name=last2, age=32}]}{userId=1, id=1, title=Anto, completed=false, employee=[{first_name=test2, last_name=last2, age=32}]}[last2]",
-    "employeename": "Anto"
-  },
-  {
-    "name": "{userId=1, id=3, title=Binu, completed=false, employee=[{first_name=test1, last_name=last1, age=32}]}[test1][last1]",
-    "employeename": "Binu"
-  },
-  {
-    "name": "{userId=1, id=4, title=Charles, completed=true, employee=[{first_name=test2, last_name=last2, age=32}]}{userId=1, id=4, title=Charles, completed=true, employee=[{first_name=test2, last_name=last2, age=32}]}[last2]",
-    "employeename": "Charles"
-  },
-  {
-    "name": "{userId=1, id=4, title=Dinesh, completed=true, employee=[{first_name=test2, last_name=last2, age=32}]}[test2][last2]",
-    "employeename": "Dinesh"
-  },
+     {
+         "name": "{userId=1, id=1, title=Anto, completed=false, employee=[{first_name=test2, last_name=last2, age=32}]}{userId=1, id=1, title=Anto, completed=false, employee=[{first_name=test2, last_name=last2, age=32}]}[last2]",
+         "employeename": "Anto"
+       },
+       {
+         "name": "{userId=1, id=3, title=Binu, completed=false, employee=[{first_name=test1, last_name=last1, age=32}]}[test1][last1]",
+         "employeename": "Binu"
+       },
+       {
+         "name": "{userId=1, id=4, title=Charles, completed=true, employee=[{first_name=test2, last_name=last2, age=32}]}{userId=1, id=4, title=Charles, completed=true, employee=[{first_name=test2, last_name=last2, age=32}]}[last2]",
+         "employeename": "Charles"
+       },
+       {
+         "name": "{userId=1, id=4, title=Dinesh, completed=true, employee=[{first_name=test2, last_name=last2, age=32}]}[test2][last2]",
+         "employeename": "Dinesh"
+       },
