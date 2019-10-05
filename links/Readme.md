@@ -3,6 +3,12 @@ editor
 
 https://developer.snaplogic.com/#prerequisites  -
 
+
+Architecture:
+=============
+
+https://www.youtube.com/watch?v=yaVCp1kRrh8
+
 snaplex:
 ========
 
