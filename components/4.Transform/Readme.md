@@ -11,3 +11,4 @@
       8	Unique
       9	Compress
       10	Decompress
+      11    BinaryToDocument - to convert the binary upload file to Document. The output view provides the binary data as a byte array    value to the "content" key in the output document data
