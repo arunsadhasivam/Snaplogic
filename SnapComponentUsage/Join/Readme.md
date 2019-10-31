@@ -147,7 +147,7 @@ read a json file
                        id :"",
                        desc:"",
                        Project: {"Ticket":{ "Assignment":{"Project_id":"3"}}}
-                     }
+                       }
               ]
       
     
