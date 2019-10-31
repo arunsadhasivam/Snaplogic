@@ -86,6 +86,8 @@ read a json file
     and split doucments correctly.so better to use document toBinary. Jsonformatter encodes the whole json so it 
     consider as 1 json document even though 3 document exist like below:
     
+    it wont sent as 3 separate document to JMS queue it sent as 1 single collection json encoded.
+    
     [
       {
         employee:"Test1",
@@ -107,8 +109,47 @@ read a json file
       }
       
     }
-      
     
+    document to Binary send 3 separate document to queue:
+    ======================================================
+    
+    document 1:
+    ============
+    
+    [
+             {
+                  employee:"Test1",
+                  id :"",
+                  desc:"",
+                  Project: {"Ticket":{ "Assignment":{"Project_id":"3"}}}
+                }
+    ]
+
+      
+      document 2:
+      ===========
+      
+       [
+               {
+                  employee:"Test2",
+                  id :"",
+                  desc:"",
+                  Project: {"Ticket":{ "Assignment":{"Project_id":"3"}}}
+                }
+      ]
+      
+    document3:
+    ===========
+    
+              [
+                    {
+                       employee:"Test1",
+                       id :"",
+                       desc:"",
+                       Project: {"Ticket":{ "Assignment":{"Project_id":"3"}}}
+                     }
+              ]
+      
     
     
 
