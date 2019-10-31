@@ -140,16 +140,14 @@ read a json file
       
     document3:
     ===========
-    
               [
-                    {
+                   {
                        employee:"Test1",
                        id :"",
                        desc:"",
                        Project: {"Ticket":{ "Assignment":{"Project_id":"3"}}}
-                       }
-              ]
-      
+                     }
+              ]      
     
     
 
