@@ -23,6 +23,14 @@ With Reuse Disabled:
 There would be a separate Aggregate snap execution for every document, so the Aggregate would perform its operation on only 
 one document and the Pipeline Execute snap would have 100 output documents. One output for every execution.
 
+When to Use VS Not to Use:
+==========================
+
+As to when to use it or not, it really depends on what the child is doing. As in the above example, if there is a snap in the child that collects documents for processing (e.g. Aggregate, Sort), you’ll need to enable reuse. In contrast, if you need to change the pipeline parameters for the child execution based on the input to the Pipeline Execute, you’ll need to disable reuse since parameters values
+cannot be changed after the first child has been started.
+
+
+
 
 
 
