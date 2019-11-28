@@ -15,12 +15,13 @@ json, mapquery,router(passthrough and null safe access checked) ->
 
 
 you can in the below execute query 
-json -> mapquery-> Router - > Mapper1 -> Execute query1
-                          --> Mapper2 -> Execute query2         
-                          --> Mapper3 -> Execute query3
-                          
-                          --> Mapper3 ->sleep-> Execute query3
 
-                          :
-                          :
-                          --> Mapper12 -> Execute query12
+      json -> mapquery-> Router - > Mapper1 -> Execute query1
+                                --> Mapper2 -> Execute query2         
+                                --> Mapper3 -> Execute query3
+
+                                --> Mapper3 ->sleep-> Execute query3
+
+                                :
+                                :
+                                --> Mapper12 -> Execute query12
