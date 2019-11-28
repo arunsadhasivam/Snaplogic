@@ -14,7 +14,8 @@ json, mapquery,router(passthrough and null safe access checked) ->
  by the 3 queries run remain will be sleep , else all try to run and concurrent exception will return.
 
 
-you can in the below execute query 
+flow of the query with passthrough disabled and sleep enabled.
+===============================================================
 
       json -> mapquery-> Router - > Mapper1 -> Execute query1
                                 --> Mapper2 -> Execute query2         
