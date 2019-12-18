@@ -18,3 +18,4 @@ join -> left(1 ) right(1) inner join
                                                 +logger                               1->input->1
                                                 mapper(add fields to copy)222
 
+ 
