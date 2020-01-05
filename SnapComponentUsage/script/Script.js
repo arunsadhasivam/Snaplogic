@@ -48,8 +48,8 @@ var impl = {
                 this.log.error(err);
                 this.error.write(wrapper);
             }
-            
         }
+        
         this.output.write(root, wrapper);
     }
 };
