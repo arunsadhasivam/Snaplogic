@@ -1,14 +1,26 @@
 ISSUE:
 ======
 
+1)
 if we add child pipeline to main pipeline and let say return failure payload , success payload separately. it will throw error.
+
+2) Also if we stop pipeline execution in child pipeline in case of failure of below sql connection and sucess flow if in case
+if sql works fine and generate result.
+
+
+Reason
+=======
+
+Above 2 cases, so it consider it as 2 flows so it complains "childpipeline should render 1 flow".
+
+even if you put union in this case. it shows "child pipeline is failing, please correct the child pipeline " to continue.
 
 
 
 Solution:
 ========
                                   
-   kafka  jms - > mapper-> db -> maper -> sucesspayload ->
+   kafka  jms - > mapper-> sql -> maper -> sucesspayload ->
                             |
                             (92)
                                  -(92)mapper->failurepaylod->
@@ -17,7 +29,7 @@ Solution:
    
    to avoid this.
 
-         kafka  jms - > mapper-> db -> maper -> sucesspayload  -> 
+         kafka  jms - > mapper-> sql -> maper -> sucesspayload  -> 
                                 |                                     Union -> mapper->payload
                                 (92)                               /
                                      -(92)mapper->failurepaylod->              
