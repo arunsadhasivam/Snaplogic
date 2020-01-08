@@ -1,0 +1,25 @@
+call z_mapIDSToMarketo[53ff655950a39d5ac14d7fe9_b9c32efe-6a25-4ae8-a764-40955f12fad4 -- 9f81d950-d15c-40f9-a90d-cb2a89415d19]
+com.snaplogic.snap.api.SnapDataException: Invalid child pipeline view configuration
+	at com.snaplogic.snaps.flow.PipeExec.process(PipeExec.java:751)
+	at com.snaplogic.snaps.flow.PipeExec.processSafely(PipeExec.java:596)
+	at com.snaplogic.snaps.flow.PipeExec.execute(PipeExec.java:499)
+	at com.snaplogic.snaps.flow.PipeExec.executeForSuggest(PipeExec.java:1484)
+	at com.snaplogic.cc.snap.common.SnapRunnableImpl.executeSnap(SnapRunnableImpl.java:813)
+	at com.snaplogic.cc.snap.common.SnapRunnableImpl.executeForSuggest(SnapRunnableImpl.java:662)
+	at com.snaplogic.cc.snap.common.SnapRunnableImpl.doRun(SnapRunnableImpl.java:871)
+	at com.snaplogic.cc.snap.common.SnapRunnableImpl.access$000(SnapRunnableImpl.java:121)
+	at com.snaplogic.cc.snap.common.SnapRunnableImpl$1.run(SnapRunnableImpl.java:410)
+	at com.snaplogic.cc.snap.common.SnapRunnableImpl$1.run(SnapRunnableImpl.java:406)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1657)
+	at com.snaplogic.cc.snap.common.SnapRunnableImpl.call(SnapRunnableImpl.java:405)
+	at com.snaplogic.cc.snap.common.SnapRunnableImpl.call(SnapRunnableImpl.java:121)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Reason: The child pipeline has more than one unlinked output view
+Resolution: Remove the extra unlinked output views or use a Union to combine all of the views
