@@ -39,7 +39,6 @@ Solution:
 Error:
 =====
 
-call z_mapIDSToMarketo[53ff655950a39d5ac14d7fe9_b9c32efe-6a25-4ae8-a764-40955f12fad4 -- 9f81d950-d15c-40f9-a90d-cb2a89415d19]
 com.snaplogic.snap.api.SnapDataException: Invalid child pipeline view configuration
 	at com.snaplogic.snaps.flow.PipeExec.process(PipeExec.java:751)
 	at com.snaplogic.snaps.flow.PipeExec.processSafely(PipeExec.java:596)
