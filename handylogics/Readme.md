@@ -2,3 +2,8 @@ Date.now().toLocaleDateTimeString('{\"timeZone\":\"PST\", "format":"MM/dd/yyyy H
 
  
 JSON.parse($Text)['employee']['form']['info']
+
+Date.parse($key_value).toString()
+
+
+$.hasOwnProperty('$.child.value')
