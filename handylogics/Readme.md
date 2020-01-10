@@ -19,3 +19,8 @@ Null check:
    $.hasPath('error')
 
 
+
+log with condition:
+=====================
+
+("logger" in $ && "error" in $  &&  "snap_details" in $)?($logger.name + ", " + $logger.source + ", id=" + $logger.id )
