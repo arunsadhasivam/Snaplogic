@@ -6,4 +6,16 @@ JSON.parse($Text)['employee']['form']['info']
 Date.parse($key_value).toString()
 
 
-$.hasOwnProperty('$.child.value')
+
+Null check:
+==========
+
+   !(‘x’ in $)
+   (‘x’ in $)
+
+   $.hasOwnProperty('error')
+
+   or
+   $.hasPath('error')
+
+
