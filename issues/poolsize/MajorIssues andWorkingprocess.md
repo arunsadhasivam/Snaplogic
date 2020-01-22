@@ -52,4 +52,8 @@ Execute Pipeline:
 
 Lets says each pipeline need parameter name like file name to process.
 
-let assume you have given
+let assume you have given poolsize of 3 and other 2 pipelines have poolsize 1 , which means 1 pipeline is allowed to run concurrently.
+then if file is small then based on router conditions and it allow the next pipeline to run or not.
+but if file size is big then first pipeline run if it run more than some time 2 pipeline also get executed concurrently.
+
+so make sure when you are giving poolsize in execute pipeline. the second pipeline starts run concurrently although it should not be running.
