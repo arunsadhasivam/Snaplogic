@@ -1,11 +1,11 @@
-1) pipeline -> calling pipeline2 ->pipeline 3
-                                                                                      Exit pipeline
-                                                                                       |(count==0)exit
-mapper ->  checkdb-> readparsefile- router(fileinprocess y/n) -> updatedb - mapper ->route- >mapper(count>0)->Execute Pipeline
-                                     |                                                                          |          
-                                 quit processing                                                            mapper -> executepipeline 2-> updated db -> put in queue -> end
-                                                                                                                       |
-                                                                                                                    mapper ->executepipeline3 ->delete file in sharepath
+        1) pipeline -> calling pipeline2 ->pipeline 3
+                                                                                              Exit pipeline
+                                                                                               |(count==0)exit
+        mapper ->  checkdb-> readparsefile- router(fileinprocess y/n) -> updatedb - mapper ->route- >mapper(count>0)->Execute Pipeline
+                                             |                                                                          |          
+                                         quit processing                                                            mapper -> executepipeline 2-> updated db -> put in queue -> end
+                                                                                                                               |
+                                                                                                                            mapper ->executepipeline3 ->delete file in sharepath
 
 
 
