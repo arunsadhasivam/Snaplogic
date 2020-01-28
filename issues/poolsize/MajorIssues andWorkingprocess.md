@@ -5,11 +5,19 @@
                                              |                                                                          |          
                                          quit processing                                                            mapper -> executepipeline 2-> updated db -> put in queue -> end
                                                                                                                                |
-       Issue because of variable wrongly  set
+                                                                                                                           mapper ->executepipeline3 ->delete file in sharepath
+
+
+
+
+Ignore below Issue -Not correct:
+================================
+
+Issue because of variable wrongly  set
    without selecting expression in variable.
    so it treats as hardcoded value .
     i.e $filepath - variable expression bind  checkbox  
-        not   selected or greyed in textbox header                                                                                                                    mapper ->executepipeline3 ->delete file in sharepath
+        not   selected or greyed in textbox header.
 
 
 
