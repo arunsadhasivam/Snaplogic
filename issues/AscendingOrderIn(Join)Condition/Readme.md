@@ -8,6 +8,26 @@
 
                                                            
 
+
+
+join:
+=====
+
+                Join type* - Inner, LeftOuter, Outer, Merge
+                Join paths
+                Left path	Right input view	Right path	
+                ===================================================
+                1             	=                                 1
+                ====================================================
+                1	=                                         1
+                Sorted streams* - Ascending,descending,unsorted.
+
+Note:
+=====
+Unsorted is better for streaming data, since it wont wait for stream to reach at that snap to do aggregate.
+like ascending means it waits for all data to reach and do aggregate.
+
+
 Issue:
 ======
 
