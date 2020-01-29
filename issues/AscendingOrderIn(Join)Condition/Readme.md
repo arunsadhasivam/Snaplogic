@@ -1,11 +1,11 @@
 
 
-mapper -> db1(sqldeveloper) ->mapper(emailid)- > validateemail->router (valid email)-> join -inner(Ascending)->kafka queue.
-                                                                |                           |
-                                                              terminate pipeline            |
-                                                                                            |
-                                                                              salesforce-> mapper(emailId)
-                                                           
+        mapper -> db1(sqldeveloper) ->mapper(emailid)- > validateemail->router (valid email)-> join -inner(Ascending)->kafka queue.
+                                                                        |                           |
+                                                                      terminate pipeline            |
+                                                                                                    |
+                                                                                      salesforce-> mapper(emailId)
+
                                                            
 
 Issue:
