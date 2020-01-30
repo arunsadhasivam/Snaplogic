@@ -7,14 +7,14 @@ Failure: Invalid configuration, Reason: Target pipeline has input views, but no 
 
 flow:
 ====
-
+         ultra task accepts input -> call pipeline simulate with normal pipeline execute.
 
 main pipeline
 ============
 
-(expect input)
-   ->mapper(with inputView) ->logger-> execute pipeline ->filter -> kafka queue.
-   
+         (expect input)
+            ->mapper(with inputView) ->logger-> execute pipeline ->filter -> kafka queue.
+
  
  To test it
  ===========
@@ -23,7 +23,9 @@ main pipeline
   
   so test it  add a document.
   
-  json generator->mapper -> document to Binary -> Binary to Document -> pipelineExecute(call mainpipeline) 
+  
+  
+         json generator->mapper -> document to Binary -> Binary to Document -> pipelineExecute(call mainpipeline) 
   
   note:
   ====
