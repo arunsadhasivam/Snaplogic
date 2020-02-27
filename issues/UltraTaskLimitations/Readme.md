@@ -1,3 +1,13 @@
+UltraTask wont support:
+=======================
+
+when running a pipeline as ultratask groupby, groupBy N, aggregate wont work directly.
+need to call in child pipeline only.
+
+
+Reference:
+===========
+
 https://community.snaplogic.com/t/merge-documents-into-one-big-document/1312/3
 
 
