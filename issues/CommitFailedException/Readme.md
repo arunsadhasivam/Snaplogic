@@ -1,11 +1,8 @@
 ISSUE:
 =====
 
- Commit cannot be completed since the group has already rebalanced and assigned the partitions to
-    another member. This means that the time between subsequent calls to poll() was longer than the
-    configured max.poll.interval.ms, which typically implies that the poll loop is spending too much
-    time message processing. You can address this either by increasing max.poll.interval.ms or by
-    reducing the maximum size of batches returned in poll() with max.poll.records.
+ Commit cannot be completed 
+ 
 Resolution: Please address reported issue.
 
 org.apache.kafka.clients.consumer.CommitFailedException: Commit cannot be completed since the group has 
