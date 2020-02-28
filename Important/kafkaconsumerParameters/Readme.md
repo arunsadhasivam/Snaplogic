@@ -98,6 +98,8 @@ Note:
 ultra task you can specify -1 to run for ever 
 if run as pipeline you can specify -1 to run for ever or 0 to say till it has message in queue.
 
-maxpollrecords : if mention 100 something, if queue cannot handle loading records  , process
+maxpollrecords :
+-----------------
+if mention 100 something, if queue cannot handle loading records  , process
 and reload next l00 . i.e before it load 100 next 100 gets loaded pipeline cannot handle
 and stop immediately.
