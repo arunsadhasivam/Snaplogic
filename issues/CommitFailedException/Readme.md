@@ -1,9 +1,10 @@
 ISSUE:
 =====
 
- Commit cannot be completed 
- 
-Resolution: Please address reported issue.
+ Commit cannot be completed Resolution: 
+
+Error message:
+==============
 
 org.apache.kafka.clients.consumer.CommitFailedException: Commit cannot be completed since the group has 
 already rebalanced and assigned the partitions to another member. This means that the time between subsequent
