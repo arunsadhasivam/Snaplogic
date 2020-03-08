@@ -57,7 +57,7 @@ var impl = {
             
         }
          
-        var root ={};
+        //var root ={};
         this.output.write(wrapper);
     }
 };
