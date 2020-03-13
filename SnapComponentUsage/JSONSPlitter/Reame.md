@@ -1,3 +1,6 @@
+INPUT:
+======
+
 "payload":
 {
     "input":
@@ -20,6 +23,9 @@ json splitter :
 
 $payload.input[*]
 
+
+OUTPUT:
+=======
 
     [
       {
