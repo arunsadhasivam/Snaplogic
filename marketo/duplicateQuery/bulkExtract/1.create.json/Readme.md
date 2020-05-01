@@ -40,27 +40,18 @@ INPUT:
         
 for using smart filter:
 ======================
+             "filter": {
+                              "smartListName": "UserDetails"
+                }
+NOTE:
+====
 
-{
-            "fields": [
-                "email"
-            ],
-            "format": "CSV",
-            "columnHeaderNames": {
-                "email": "email",
-                "FirstName": "FirstName",
-                "LastName": "LastName"
-            },
-            "filter": {
-                "smartListName": "UserDetails"
-            }
-        }
-]
-
+api give preference to 1 filter query and time should be in ISO 8601 format e.g:"2020-03-30T08:41:44Z"
 
         
 Important:
 ==========
+
 
 in marketo you can set dynamic time by creating smartfilter UserDetails
 
