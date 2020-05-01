@@ -15,6 +15,7 @@ Minus 1 days
 =============
 
 Date.parse(Date.now().minusDays(1),"yyyyMMdd hhmmss").toLocaleDateTimeString({"format":"yyyy-MM-dd'T'hh:mm:ss'Z'"})
+output -'2020-01-18T00:00:00Z'
 
 Null check:
 ==========
