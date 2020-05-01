@@ -44,7 +44,7 @@ Output:
 
               },
               "original": {
-                "restUrl": "/bulk/v1/leads/export/6a447a1d-6a75-4a86-82b7-c5726cab626a/status.json?access_token=38fa2884-b125-445c-85ec-161e483e20de:ab",
+                "restUrl": "/bulk/v1/leads/export/6a447a1d-6a75-4a86-82b7-c5726cab626a/status.json?access_token=token",
                 "restAuth": "Bearer 38fa2884-b125-445c-85ec-161e483e20de:ab",
               }
             }
