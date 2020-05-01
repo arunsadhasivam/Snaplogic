@@ -6,6 +6,15 @@ JSON.parse($Text)['employee']['form']['info']
 Date.parse($key_value).toString()
 
 
+date format:
+============
+
+Date.parse(Date.now().minusDays(1),"yyyyMMdd hhmmss").toLocaleDateTimeString({"format":"yyyy-MM-dd hh:mm:ss"})
+
+Minus 1 days
+=============
+
+Date.parse(Date.now().minusDays(1),"yyyyMMdd hhmmss").toLocaleDateTimeString({"format":"yyyy-MM-dd'T'hh:mm:ss'Z'"})
 
 Null check:
 ==========
