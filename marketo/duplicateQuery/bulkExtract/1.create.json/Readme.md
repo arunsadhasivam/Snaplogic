@@ -1,8 +1,10 @@
-INPUT:
-======
+create a filter:
+===============
+
        
        /POST /bulk/v1/leads/export/create.json?access_token=17ab5d3c-6bf4-4033-8ab9-796e9bc99ac3:ab
-
+INPUT:
+======
 
         [
             {
@@ -35,8 +37,35 @@ INPUT:
             }
         ]
         
+        
+for using smart filter:
+======================
+
+{
+            "fields": [
+                "email"
+            ],
+            "format": "CSV",
+            "columnHeaderNames": {
+                "email": "email",
+                "FirstName": "FirstName",
+                "LastName": "LastName"
+            },
+            "filter": {
+                "smartListName": "UserDetails"
+            }
+        }
+]
+
+
+        
 Important:
 ==========
+
+in marketo you can set dynamic time by creating smartfilter UserDetails
+
+you can choose any field and select "in time frame" field
+in time frame - Yesterday if you want daily filter yesterday record , or 1ast month record, last year
         
 output:
 ======
