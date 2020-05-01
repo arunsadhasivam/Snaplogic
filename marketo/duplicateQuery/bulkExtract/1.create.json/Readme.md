@@ -3,6 +3,8 @@ create a filter:
 
        
        /POST /bulk/v1/leads/export/create.json?access_token=17ab5d3c-6bf4-4033-8ab9-796e9bc99ac3:ab
+       
+       
 INPUT:
 ======
 
@@ -46,7 +48,10 @@ for using smart filter:
 NOTE:
 ====
 
-api give preference to 1 filter query and time should be in ISO 8601 format e.g:"2020-03-30T08:41:44Z"
+       -api give preference to 1 filter query and time should be in ISO 8601 format e.g:"2020-03-30T08:41:44Z"
+       -if filter criteria does not changed it will returns same exportId, subsequent will fail since it return same
+         accessToken and exportId for the same filter condition run multiple times.
+       - date will between 31 days from from to end date range not more than that.  
 
         
 Important:
