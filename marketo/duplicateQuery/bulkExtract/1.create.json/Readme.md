@@ -1,5 +1,7 @@
 INPUT:
 ======
+/POST /bulk/v1/leads/export/create.json?access_token=17ab5d3c-6bf4-4033-8ab9-796e9bc99ac3:ab
+
 
         [
             {
@@ -21,15 +23,19 @@ INPUT:
                             "LastName": "LastName"
                         },
                         "filter": {
-                            "updatedAt": {
-                                "startAt": "2020-04-28",
-                                "endAt": "2020-04-28"
-                            }
+                          updatedAt":
+                          {
+                            "startAt":"2020-03-30T08:41:44Z",
+                            "endAt":"2020-04-30T08:41:44Z"
+                           }
                         }
                     }
                 }
             }
         ]
+        
+Important:
+==========
         
 output:
 ======
