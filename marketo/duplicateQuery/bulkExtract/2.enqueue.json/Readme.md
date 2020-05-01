@@ -4,7 +4,7 @@ in queued,processing,completed,Rejected.
 Input:
 =====
 
-/bulk/v1/leads/export/[exportid]/enqueue.json?access_token=7857f25d-fc4e-4499-8166-7367ae6638d0:ab
+    POST /bulk/v1/leads/export/[exportid]/enqueue.json?access_token=7857f25d-fc4e-4499-8166-7367ae6638d0:ab
 
 output:
 ======
