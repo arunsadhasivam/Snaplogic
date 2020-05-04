@@ -12,7 +12,12 @@ json input:
 
 flow:
 ======
-jsonGenerator(abovecontent) ->mapper(mapfield) ->jsonsplitter->mapper(split)->mapper(mapptoFields)->CSV Formatter->filewriter
+
+      jsonGenerator(abovecontent) ->mapper(mapfield) ->jsonsplitter->mapper(split)->mapper(mapptoFields)->CSV Formatter->filewriter
+
+
+component:
+==========
 
       1)mapper(mapfield) - 
 
