@@ -29,9 +29,8 @@ jsonGenerator(abovecontent) ->mapper(mapfield) ->jsonsplitter->mapper(split)->ma
 
       4) mapper(mapptoFields)    
                $content[0]- id
-               $content[1]- name
-               $content[2]- salary
-               $content[3]- designation
+               ......
+               $content[3]- salary
      5) csv formatter
                  just dont change anything in csv formatter drag & drop.
                  
