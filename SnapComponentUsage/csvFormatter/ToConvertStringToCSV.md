@@ -13,7 +13,8 @@ json input:
 flow:
 ======
 
-      jsonGenerator(abovecontent) ->mapper(mapfield) ->jsonsplitter->mapper(split)->mapper(mapptoFields)->CSV Formatter->filewriter
+      jsonGenerator(abovecontent) ->mapper(mapfield) ->jsonsplitter->mapper(split)->
+                        ->mapper(mapptoFields)->CSV Formatter->filewriter
 
 
 component:
@@ -34,7 +35,7 @@ component:
 
       4) mapper(mapptoFields)    
                $content[0]- id
-               ......
+               1-name 2-designation
                $content[3]- salary
      5) csv formatter
                  just dont change anything in csv formatter drag & drop.
