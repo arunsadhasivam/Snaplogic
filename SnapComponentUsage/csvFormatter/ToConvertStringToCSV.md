@@ -40,4 +40,5 @@ component:
      5) csv formatter
                  just dont change anything in csv formatter drag & drop.
                  
-      6)filewriter : just give the name of the file                 
+      6)filewriter : just give the name of the file      
+                  just disable write header since you give as single string, no separate header field .
