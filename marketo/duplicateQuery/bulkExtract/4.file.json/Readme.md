@@ -27,3 +27,7 @@ Input:
 
       }
     ]
+
+header:
+=======
+         response entity type should be set as TEXT not binary or default it wont work in snaplogic
