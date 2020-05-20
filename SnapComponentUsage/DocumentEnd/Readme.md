@@ -9,6 +9,7 @@ if file exists process and write to another file . so last write to another file
 to avoid processing further to halt further processsing documentEnd is used.
 
 
-   mapper -> router -> no file exists -> documentEnd.
+    
+    mapper -> router -> no file exists -> documentEnd.
                |
                exist -> process -> filewriter(another file)
