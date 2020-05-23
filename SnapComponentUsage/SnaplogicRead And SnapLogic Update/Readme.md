@@ -10,8 +10,8 @@ assetpath: $path_id + '/'+ $job_name
 note: job_name comes from snaplogicRead output:
 
 
-SnapLogic Read -> mapper  (true - $parameters.enabled) to enable or disable job. ->SnapLogic Update
-                      (passthrough checkbox selected)
+        SnapLogic Read -> mapper  (true - $parameters.enabled) to enable or disable job. ->SnapLogic Update
+                              (passthrough checkbox selected)
 
 
  
