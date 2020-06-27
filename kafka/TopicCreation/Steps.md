@@ -38,4 +38,27 @@ Step 5:
 
 when connecting to kafka use this user to connect.
 
-    mapper -> kafkaproducer 
+    mapper -> kafkaproducer  ->
+    
+    kafkaproducer -> account tab give account name and use kafka properties below and then username & password which generated
+    above  "User : "emp_admin_dev", Password : Test123"
+    
+kafka properties:
+=================
+
+		Bootstrap servers*
+		====================
+		kafka-dev-1.com:9092,kafka-dev-2.com:9092,kafka-dev-3.com:9092
+		Schema registry URL= ""
+		
+		Advanced Kafka key property	Advanced Kafka value property	
+		==============================================================
+		
+		request.timeout.ms	=		60000
+		... and other properties
+		
+https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/1438051/Confluent+Kafka+Snap+Pack		
+
+https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/1438761/Confluent+Kafka+Consumer
+
+    
