@@ -51,6 +51,10 @@ Use in Kafka producer snap:
 	it shows "no permission to read from topic" or " no permission to topic it will say 
 	
 	https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/1438761/Confluent+Kafka+Consumer
+	
+	acknowledge option config:
+	
+	https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/1438842/Confluent+Kafka+Acknowledge
 
 kafka properties:
 =================
