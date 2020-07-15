@@ -34,12 +34,12 @@ binding:
 ISSUE:
 ======
 
-for the first we need to set the 
+    -for the first we need to set the 
         partition - 0 
         seektype - specific offset
         offset - 0
         
-if we purge the queue again need to manually      
+    -if we purge the queue again need to manually      
         partition - 0 
         seektype - specific offset
         offset - 0
