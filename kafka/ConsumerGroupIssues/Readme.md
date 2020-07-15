@@ -34,7 +34,7 @@ binding:
 ISSUE:
 ======
 
-    -for the first we need to set the 
+    -for the first we need to set the pipeline hardcoded to make binding happen.
         partition - 0 
         seektype - specific offset
         offset - 0
@@ -44,4 +44,13 @@ ISSUE:
         seektype - specific offset
         offset - 0
    
-   
+    once done binding gets created as below.
+        
+        Consumer Group: EMP.CG1
+        TOPIC : EMP.QUEUE	
+
+
+        Consumer Group: EMP.CG2
+        TOPIC : EMP.QUEUE	
+
+            
