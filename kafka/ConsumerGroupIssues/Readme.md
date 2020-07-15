@@ -34,6 +34,14 @@ binding:
 ISSUE:
 ======
 
+     -In snaplogic normal setting will be
+        partition - empty ( so it takes all partition in cluster)
+        seektype - end
+        offset - empty
+
+To allow binding to happen between EMP.CG1 to EMP.QUEUE and EMP.CG2 to EMP.QUEUE:
+=================================================================================
+
     -for the first we need to set the pipeline hardcoded to make binding happen.
         partition - 0 
         seektype - specific offset
