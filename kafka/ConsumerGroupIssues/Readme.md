@@ -23,12 +23,12 @@ if we map EMP.queue to EMP.CG1 and EMP.CG2 it bindings and creates a binding for
 binding:
 ========
 
-Consumer Group: EMP.CG1
-TOPIC : EMP.QUEUE	
+    Consumer Group: EMP.CG1
+    TOPIC : EMP.QUEUE	
 
 
-Consumer Group: EMP.CG2
-TOPIC : EMP.QUEUE	
+    Consumer Group: EMP.CG2
+    TOPIC : EMP.QUEUE	
 
 
 
