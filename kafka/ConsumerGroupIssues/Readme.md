@@ -42,12 +42,12 @@ ISSUE:
 To allow binding to happen between EMP.CG1 to EMP.QUEUE and EMP.CG2 to EMP.QUEUE:
 =================================================================================
 
-    -for the first we need to set the pipeline hardcoded to make binding happen.
+    -for the first time of using queue or after purge of queue, we need to set the pipeline hardcoded to make binding happen.
         partition - 0 
         seektype - specific offset
         offset - 0
         
-    -if we purge the queue again need to manually      
+    - Again evenif we purge the queue again need to manually      
         partition - 0 
         seektype - specific offset
         offset - 0
