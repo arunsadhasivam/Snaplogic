@@ -1,6 +1,8 @@
 Pipeline Execute
 ================
 
+in pipeline Execute for better performance Reuse executions is checked it wont do processing for each document it process as whole.
+
 
 if  "Reuse executions to process documents" is not checked 
 
