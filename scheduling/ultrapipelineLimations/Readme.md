@@ -5,13 +5,13 @@
       should not have head, tail.
       
       
-        Reuse executions to process documents	
-        ======================================
-        
-        This flag specifies the execution mode to use. When enabled, the Snap starts a child execution and passes multiple inputs to the Pipeline.
-        Reusable executions continue to live until all of the input documents to this Snap have been fully processed.
+    Reuse executions to process documents	
+    ======================================
 
-        If this flag is not enabled, then a new Pipeline execution is created for each input document.  
+    This flag specifies the execution mode to use. When enabled, the Snap starts a child execution and passes multiple inputs to the Pipeline.
+    Reusable executions continue to live until all of the input documents to this Snap have been fully processed.
+
+    If this flag is not enabled, then a new Pipeline execution is created for each input document.  
 
 
 
