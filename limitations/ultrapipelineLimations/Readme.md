@@ -16,13 +16,15 @@
 
 
 
-        Pipeline parameter values can only be changed if this flag is not enabled. In other words, reusable executions cannot have different 
+        Pipeline parameter values can only be changed if this flag is not enabled. In other words, reusable executions 
+        cannot have different 
         Pipeline parameter values for different documents.
 
     Ultra Mode Compatibility
     =========================
 
-        If reuse is enabled and this Snap is used in an Ultra Pipeline, then the Snaps in the child Pipeline must also be Ultra-compatible.
+        If reuse is enabled and this Snap is used in an Ultra Pipeline, then the Snaps in the child Pipeline must
+        also be Ultra-compatible.
 
         If you need to use Snaps that are not Ultra-compatible in an Ultra Pipeline, you can create a child Pipeline 
         with those Snaps and use a Pipeline Execute Snap with reuse disabled to invoke the Pipeline. Since the child Pipeline is 
