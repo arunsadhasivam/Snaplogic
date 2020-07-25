@@ -24,11 +24,12 @@
         If reuse is enabled and this Snap is used in an Ultra Pipeline, then the Snaps in the child Pipeline must also be Ultra-compatible.
 
         If you need to use Snaps that are not Ultra-compatible in an Ultra Pipeline, you can create a child Pipeline with those Snaps and use a 
-        Pipeline Execute Snap with reuse disabled to invoke the Pipeline. Since the child Pipeline is executed for every input document, the Ultra Pipeline 
-        restrictions do not apply. 
+        Pipeline Execute Snap with reuse disabled to invoke the Pipeline. Since the child Pipeline is executed for every input document, 
+        the Ultra Pipeline restrictions do not apply. 
 
         For example, if you want to run an SQL Select operation on a table that would return more than one document, you can put a
-        Select Snap followed by a Group By N Snap with the group size set to zero in a child Pipeline. In that configuration,                                                             the child Pipeline is executed, performs the select operation, and then the Group By Snap gathers all of the                                                                     outputs into a single document or binary data.That single output document or binary data can then be used as the output of the Ultra Pipeline.
+        Select Snap followed by a Group By N Snap with the group size set to zero in a child Pipeline. In that configuration,                                                             the child Pipeline is executed, performs the select operation, and then the Group By Snap gathers all of the outputs into a
+        single document or binary data.That single output document or binary data can then be used as the output of the Ultra Pipeline.
 
     Default value: 
     =============
