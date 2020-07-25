@@ -8,8 +8,9 @@
     Reuse executions to process documents	
     ======================================
 
-        This flag specifies the execution mode to use. When enabled, the Snap starts a child execution and passes multiple inputs to the Pipeline.
-        Reusable executions continue to live until all of the input documents to this Snap have been fully processed.
+        This flag specifies the execution mode to use. When enabled, the Snap starts a child execution and passes multiple 
+        inputs to the Pipeline.Reusable executions continue to live until all of the input documents to this Snap have been 
+        fully processed.
 
         If this flag is not enabled, then a new Pipeline execution is created for each input document.  
 
@@ -23,8 +24,9 @@
 
         If reuse is enabled and this Snap is used in an Ultra Pipeline, then the Snaps in the child Pipeline must also be Ultra-compatible.
 
-        If you need to use Snaps that are not Ultra-compatible in an Ultra Pipeline, you can create a child Pipeline with those Snaps and use a 
-        Pipeline Execute Snap with reuse disabled to invoke the Pipeline. Since the child Pipeline is executed for every input document, 
+        If you need to use Snaps that are not Ultra-compatible in an Ultra Pipeline, you can create a child Pipeline 
+        with those Snaps and use a Pipeline Execute Snap with reuse disabled to invoke the Pipeline. Since the child Pipeline is 
+        executed for every input document, 
         the Ultra Pipeline restrictions do not apply. 
 
         For example, if you want to run an SQL Select operation on a table that would return more than one document, you can put a
