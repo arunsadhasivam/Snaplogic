@@ -29,9 +29,11 @@
         executed for every input document, 
         the Ultra Pipeline restrictions do not apply. 
 
-        For example, if you want to run an SQL Select operation on a table that would return more than one document, you can put a
-        Select Snap followed by a Group By N Snap with the group size set to zero in a child Pipeline. In that configuration,                                                             the child Pipeline is executed, performs the select operation, and then the Group By Snap gathers all of the outputs into a
-        single document or binary data.That single output document or binary data can then be used as the output of the Ultra Pipeline.
+        For example, if you want to run an SQL Select operation on a table that would return more than 
+        one document, you can put a Select Snap followed by a Group By N Snap with the group size set to zero in a 
+        child Pipeline. In that configuration,the child Pipeline is executed, performs the select operation, and 
+        then the Group By Snap gathers all of the outputs into a single document or binary data.That single
+        output document or binary data can then be used as the output of the Ultra Pipeline.
 
     Default value: 
     =============
