@@ -1,20 +1,25 @@
 Mingling Non-streaming snap component vs Streaming snap component:
 ====================================================================
 
-In ultra  pipleine if you mingle normal non-stream snaps vs stream snap multithreading issues will occcur.
+In ultra  pipleine if you have snap which pulls token and used in rest calls tokens generated in previous
+snap , problem is token has TLE (time to live) so by the time it goes consumer read message and use
+in rest call it may expire so make sure you use correct place like below
 
-      filereader->mapper->getTokens-> consumer -> join-> restdelete -> acknowlege -> end
+ issue pipeline :
+ ================
+ 
+      filereader->mapper->getTokens-> copy->consumer -> mapper(set request)-> join->mapper(setrequest) ->restapicalldelete -> acknowlege -> end
+                                      (token)                                (readtoken)    
       
-      
+like 
 
-in this filereader - getting tokens if work on ultra pipeline it will fail since filereader wont run continuously in consumer
-if we keep (Message count -l) as kafka setting it will run continuously . so it wont work well.
+better way to use in pipeline tokens:
+=====================================
 
+      consumer -> filereader->mapper->getTokens-> mapper(setrequest)-> restdelete -> acknowlege -> end
 
-consumer -> filereader->mapper->getTokens-> join-> restdelete -> acknowlege -> end
+getTokens -> put get token in childpipeline persist the token in file, read the file check TLE(time to live for token is valid) if so return 
+the token else make a new call persist the token and return.
 
-getTokens -> is api call to get connection api-token.
-
-Even if you change the pipeline to below it will fail.
-
-To avoid this move getToken in child pipeline it will solve the issue.
+we can move this as component so using (pipeline Execute ) call the child pipeline and return token from (original.access_token)
+since child pipeline return with original.access_token.
