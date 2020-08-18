@@ -22,7 +22,9 @@ https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/1438286/Mapper
             Update list of maps: target = $customers[*].first_name
             This translates into "write the value into the 'first_name' field in all elements of the 'customers' array".
             Update list of lists: target = $lists_of_lists[*][(value.length)]
-            For performance reasons, the Mapper does not make a copy of any arrays or objects written to the Target Path. If you write the same array or object to more than one target path and plan to modify the object, make the copy yourself. For example, given the array "$myarray" and the following mappings:
+            For performance reasons, the Mapper does not make a copy of any arrays or objects written to the Target Path.
+            If you write the same array or object to more than one target path and plan to modify the object, make the copy yourself. 
+            For example, given the array "$myarray" and the following mappings:
 
             $myarray -> $MyArray
             $myarray -> $OtherArray
