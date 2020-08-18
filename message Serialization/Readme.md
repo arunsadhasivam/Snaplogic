@@ -31,7 +31,8 @@ https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/1438286/Mapper
 
 
 
-            ny future changes made to either "$MyArray" or "$OtherArray" are in the both arrays. In that case, make a copy of the array as shown below:
+            Any future changes made to either "$MyArray" or "$OtherArray" are in the both arrays.
+            In that case, make a copy of the array as shown below:
 
             $myarray -> $MyArray
             [].concat($myarray) -> $OtherArray
