@@ -17,18 +17,33 @@
        like that use   $original to update in between or else just  carry over and can use whenever you need $original.rest1_input.
       
            better to use  like in $rest2 
+           ===============================
            
            "processed rest1"                      $original.rest1_input.status.
             Date.now()                            $original.rest1_input.endTime
             Date.now()-rest1.start_time()         $original.rest1_input.endTime
             
             
-            VS
+            VS  
+
+
+            this way  3 step process as you can need temp variable and then change 
+            =========================================================================
+            
+            
+                  3 Step Process:
+                  ===============
+                  1) create temp variable  $original.rest1_input    $rest1_input
+                  2) set values like below
+                  3) need to clear the $original else duplicate fields exists i.e along with $tracking $original.tracking also exists.
+            
+            
              in rest 2 do 
-             $original.rest1_input    $rest1_input
+             $original.rest1_input    $rest1_input ( temp variable)
              "processed rest1"                      $rest1_input.status.
               Date.now()                            $rest1_input.endTime
               Date.now()-rest1.start_time()         $rest1_input.endTime
+              $original                              //clear the original
               
               
               since as you can see if you need any update you can update to $original instance .
