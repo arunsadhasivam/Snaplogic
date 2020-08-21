@@ -32,7 +32,8 @@ we want merge tracking inside payload.
 
 ERROR:
 =====
-      Failure: Failed to serialize document since it may contain a loop, Reason: Failed to serialize document since it may contain a loop
+      Failure: Failed to serialize document since it may contain a loop, Reason: 
+      Failed to serialize document since it may contain a loop
 
 
 Solution:
