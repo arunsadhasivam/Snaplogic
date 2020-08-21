@@ -89,7 +89,10 @@
        In map3 set all values need for the rest 4
        ===========================================
           
-                    
+        Map configuration 
+        ===================
+        
+          Expression 
            
           $original.rest1.id           $rest1.id 
           $original.rest3.response     $rest3.response  
