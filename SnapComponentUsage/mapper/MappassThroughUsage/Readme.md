@@ -105,6 +105,11 @@
             rest2.response ,rest1.responsetime, rest2.input all gets cleared.
        
        
+       NOTE:
+       =======
+       Also Aware that if multiple child pipeline in between rest1 , rest3
        
+       let say in rest1 we have 2 child pipeline  after 2 child pipeline when we try to get 
+       it become like $original.$original.rest1_input.
 
       
