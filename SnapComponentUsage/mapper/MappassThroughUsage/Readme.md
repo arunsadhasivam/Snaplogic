@@ -97,8 +97,8 @@
           
           
           so response which gets accumulated previously in map1 (rest1) , map2 (rest2) gets cleared in map3 (rest3)
-            since passthrough unchecked in map3 and wont carry forward  to rest4(map4). since we manually set $original.rest1.id  
-            and $original.rest3.response will only carry forward to map4(rest4) .
+            since passthrough unchecked in map3 and wont carry forward  to rest4(map4). but since we manually set  $original.rest1.id  
+            and $original.rest3.response in map3 (rest3) will only carry forward to map4(rest4) .
             rest2.response ,rest1.responsetime, rest2.input all gets cleared.
        
        
