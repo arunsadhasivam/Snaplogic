@@ -93,8 +93,8 @@
           $original.rest3.response     $rest3.response  
           $ response                    ""
           
-          so response which gets accumulated previously in map1 (rest1) , map2 (rest2) gets cleared in map3 (rest3) and wont carry forward
-          to rest4(map4). since we manually set $original.rest1.id  and $original.rest3.response will only carry forward
+          so response which gets accumulated previously in map1 (rest1) , map2 (rest2) gets cleared in map3 (rest3) 
+          and wont carry forward  to rest4(map4). since we manually set $original.rest1.id  and $original.rest3.response will only carry forward
           rest2.response ,rest1.responsetime, rest2.input all gets cleared.
        
        
