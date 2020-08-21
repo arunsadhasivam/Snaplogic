@@ -13,8 +13,8 @@
 
       see unless you want to edit the response you can just carry 1->2->3 till you set pass through 
       response from rest1 available in rest3       just need to use $original.rest1_input.
-      if you want to update some thing intermediate i.e in between rest1 to rest3, you can use $original.rest1_input.start_time, like that use
-      $original to update in between or else just  carry over and can use whenever you need $original.rest1_input.
+      if you want to update some thing intermediate i.e in between rest1 to rest3, you can use $original.rest1_input.start_time,
+       like that use   $original to update in between or else just  carry over and can use whenever you need $original.rest1_input.
       
            better to use  like in $rest2 
            
