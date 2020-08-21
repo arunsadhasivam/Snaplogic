@@ -13,10 +13,32 @@
 
       see unless you want to edit the response you can just carry 1->2->3 till you set pass through 
       response from rest1 available in rest3       just need to use $original.rest1_input.
-      if you want to update some thing you can use $original.rest1_input.start_time, like that use
+      if you want to update some thing intermediate i.e in between rest1 to rest3, you can use $original.rest1_input.start_time, like that use
       $original to update in between or else just  carry over and can use whenever you need $original.rest1_input.
       
-      
+           better to use  like in $rest2 
+           
+           "processed rest1"                      $original.rest1_input.status.
+            Date.now()                            $original.rest1_input.endTime
+            Date.now()-rest1.start_time()         $original.rest1_input.endTime
+            
+            
+            VS
+             in rest 2 do 
+             $original.rest1_input    $rest1_input
+             "processed rest1"                      $rest1_input.status.
+              Date.now()                            $rest1_input.endTime
+              Date.now()-rest1.start_time()         $rest1_input.endTime
+              
+              
+              since as you can see if you need any update you can update to $original instance .
+            
+             
+
+            
+
+           
+           instead
       
       
       
