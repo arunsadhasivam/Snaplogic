@@ -84,18 +84,22 @@
        let say you can carry the object from rest1 -> rest3 and we have map1 -> rest1 ,map2->rest2, map3->res3
        after rest3 we dont want passthrough means  uncheck pass through in map3
        
-        in map3 set all values need for the rest 4
-        
-           Expr                         Target
-           ====================================
+       
+       
+       In map3 set all values need for the rest 4
+       ===========================================
+          
+                    
            
           $original.rest1.id           $rest1.id 
           $original.rest3.response     $rest3.response  
           $ response                    ""
           
-          so response which gets accumulated previously in map1 (rest1) , map2 (rest2) gets cleared in map3 (rest3) 
-          and wont carry forward  to rest4(map4). since we manually set $original.rest1.id  and $original.rest3.response will only carry forward
-          rest2.response ,rest1.responsetime, rest2.input all gets cleared.
+          
+          so response which gets accumulated previously in map1 (rest1) , map2 (rest2) gets cleared in map3 (rest3)
+            since passthrough unchecked in map3 and wont carry forward  to rest4(map4). since we manually set $original.rest1.id  
+            and $original.rest3.response will only carry forward to map4(rest4) .
+            rest2.response ,rest1.responsetime, rest2.input all gets cleared.
        
        
        
