@@ -71,9 +71,9 @@ group
             }
 
 
-          copy - >    mapfields ->           group (50)    ->          join ->splitter  ->   mapper {$payload.inputdata,$payload.$logger}
-          |          (message_group)            {$email                  |                  
-     tail($logger)(A) $inputdata.email->email     $logging }        (A) mapper($logger) 
+          copy - >    mapfields ->        group (50)    ->  join   ->splitter  ->   mapper {$payload.inputdata,$payload.$logger}
+          |          (message_group)            {$email          |                  
+     tail($logger)(A) $inputdata.email->email     $logging }    (A) mapper($logger) 
                         ignore $logger
 
 
