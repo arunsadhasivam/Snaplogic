@@ -85,9 +85,9 @@ poolsize vs reuse
 ===================
 
 
-if we keep the poolsize as 1 and reuse checked then child pipeline return group fifty records.
+if we keep the poolsize as 1 and reuse checked then child pipeline return group fifty records i.e if 200 then split as 4 (50) grouped records.
 
-if we keep the poolsize as 200 and reuse unchecked then child pipeline return group fifty records.
+if we keep the poolsize as 200 and reuse unchecked then child pipeline return group fifty records as like above.
 
 if we keep the poolsize as 200 and reuse then it return full 50 records it wont group.
 
