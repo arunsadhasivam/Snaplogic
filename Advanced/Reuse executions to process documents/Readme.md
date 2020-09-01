@@ -47,21 +47,33 @@ output:
 
 group
 ======
-            {
+           [
+             {
                 inputdata
                 {
+                
+                },
+                logger{
+                
                 }
+              },  
+                
                :::
-               ,
+              { 
                inputdata
-               {
+                {
+                
+                },
+                logger{
+                
+                }
                }
             }
 
 
-            copy - >    mapfields -> group (50)         ->   mapper        -> copy ->splitter  -> group(50) ->  join ($payload
-             |          (message_group)       {$input           |
-            logger   zero it                $logging }       mapper($logger) 
+            copy - >    mapfields ->           group (50)         ->      mapper        -> copy ->splitter  -> group(50) ->  join ($payload
+             |          (message_group)          {$input                     |
+            logger     $inputdata.email->email   $logging }                 mapper($logger) 
 
            
 
