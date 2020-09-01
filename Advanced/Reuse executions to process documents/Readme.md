@@ -71,11 +71,11 @@ group
             }
 
 
-            copy - >    mapfields ->           group (50)         ->      mapper        -> copy ->splitter  -> group(50) ->  join ($payload
-             |          (message_group)          {$input                     |
-            logger     $inputdata.email->email   $logging }                 mapper($logger) 
+                      copy - >    mapfields ->           group (50)    ->          join ->splitter  ->   mapper {$payload.inputdata,$payload.$logger}
+                      |          (message_group)            {$email                  |                  
+                 tail($logger)(A) $inputdata.email->email     $logging }        (A) mapper($logger) 
+                                    ignore $logger
 
-           
 
 join -     $payload  - $tracking 1 -1 
 group by (0) means it group all records to array       
