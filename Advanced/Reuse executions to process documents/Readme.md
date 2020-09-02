@@ -91,3 +91,11 @@ if we keep the poolsize as 200 and reuse unchecked then child pipeline return gr
 
 if we keep the poolsize as 200 and reuse then it return full 50 records it wont group.
 
+Reuse Disadvantages:
+====================
+
+problem with reuse is it acts like jndi connection pool, if you give pool size1  and reuse enable it works like single thread one. so performance issues
+may occur.
+
+Better use without reuse and poolsize of 200 for good performance.
+
