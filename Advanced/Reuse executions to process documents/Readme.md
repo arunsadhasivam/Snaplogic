@@ -99,3 +99,5 @@ may occur.
 
 Better use without reuse and poolsize of 200 for good performance.
 
+Use Reuse if you are aggregate documents to main queue.
+
