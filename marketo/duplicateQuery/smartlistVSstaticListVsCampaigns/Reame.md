@@ -52,4 +52,6 @@ steps : marketo > marketo Activities> create smart Campaign >create a separate f
    in the flow ADD TO LIST give the static list name. 
 3) create a schedule when to run , it runs campaign and then populate the static list. so through campaign you can make advantage
 of smartlist and static list and then use it.so you can scheudle every day to run the campaign and then populate the static list by
-using smart list (Duplicate Fields -Email). so now statlist automatically gets updated and also retrieve through api is also easy.
+using smart list (Duplicate Fields -Email). so now statlist automatically gets updated and also retrieve through api is also easy. through this
+way you can take full advantage of smartlist, static list and since we are using staticlist in snaplogic we can pull records fastly rather
+than download by using bulk api.
