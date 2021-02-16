@@ -43,10 +43,11 @@
        ===================
 
 
-          source                                                                                                               | target
-          -----------------------------------------------------------------------------------------------------------------------------------------
+          source                                                                          | target
+          -------------------------------------------------------------------------------------------------------------
 
-        $..[?(value == null || (value instanceof Object && value.isEmpty()) || (value instanceof Array && value.length == 0) )] :  empty target path
+        $..[?(value == null || (value instanceof Object && value.isEmpty())
+             || (value instanceof Array && value.length == 0) )] :                       | empty target path
 
 
         target should be empty so that all nulls will be cleared.
