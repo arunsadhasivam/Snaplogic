@@ -43,12 +43,14 @@ syntax:
       whatever inside the union[ ] brackets should work when run separately but appendPipe does not need to be.
 
 
-    index=ips_snaplogic_np AdobeStage "Enterprise Marketing"|eval msgArray = split(msg, ",") 
+    index=<<searchindex>> |eval msgArray = split(msg, ",") 
     |eval pipeline_name="test1"
     |eval message_unique_id="1"
     |table   pipeline_name,message_unique_id
     |stats values(pipeline_name) as pipeline_name by message_unique_id  
     | union [
+      search    index=<<searchindex>>|eval msgArray = split(msg, ",") 
+
     eval pipeline_name1="test2"
     |eval message_unique_id1="2"
     |table   pipeline_name1,message_unique_id1 
