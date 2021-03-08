@@ -27,7 +27,7 @@ command:
   output:
   =======
   
-  /msg : "input : message = "employee details", Country="US",Location="Test", 
+    /msg : "input : message = "employee details", Country="US",Location="Test", 
         response = { "EmpName:"Test", "EmpID":"1001","address":"Test","email":"test@gmail.com" }
     
   
