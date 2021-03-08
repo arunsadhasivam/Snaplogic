@@ -18,11 +18,11 @@ input payload:
 command:
 =========
 
-  index=<<search index>> 
-  |eval msgArray = split(msg, ",")
-  | rex field=msg "\"EmpID\":\"(?<EmpID>[^,]*)\","
-  | eval email =mvfilter(match(msg,"test@gmail.com"))| where len(result)>0 | table result		
-  
+      index=<<search index>> 
+      |eval msgArray = split(msg, ",")
+      | rex field=msg "\"EmpID\":\"(?<EmpID>[^,]*)\","
+      | eval email =mvfilter(match(msg,"test@gmail.com"))| where len(result)>0 | table result		
+
   
   output:
   =======
