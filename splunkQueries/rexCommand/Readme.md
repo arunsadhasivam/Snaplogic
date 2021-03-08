@@ -12,6 +12,8 @@ sample payload:
     /msg : "input : message = "employee details",Country="US",Location="Test", 
         response = { "EmpName:"Test", "EmpID":"1003","address":"Test" }
 
+command:
+=========
 
       index=<<search index>> 
       |eval msgArray = split(msg, ",")
