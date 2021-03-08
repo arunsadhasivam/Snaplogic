@@ -2,12 +2,13 @@ To search in particular msg key value pair in middle of msg using regex:
 =============================================================================
 
 
-payload:
+sample payload:
+================
 
-  /msg : "input : message = "employee details", response = { "EmpName:"Test", "EmpID":"1001" }
-  /msg : "input : message = "employee details", response = { "EmpName:"Test", "EmpID":"1002" }
-  /msg : "input : message = "employee details", response = { "EmpName:"Test", "EmpID":"1003" }
-  
+    /msg : "input : message = "employee details", response = { "EmpName:"Test", "EmpID":"1001" }
+    /msg : "input : message = "employee details", response = { "EmpName:"Test", "EmpID":"1002" }
+    /msg : "input : message = "employee details", response = { "EmpName:"Test", "EmpID":"1003" }
+
 
       index=<<search index>> 
       |eval msgArray = split(msg, ",")
