@@ -5,9 +5,12 @@ To search in particular msg key value pair in middle of msg using regex:
 sample payload:
 ================
 
-    /msg : "input : message = "employee details", Country="US",Location="Test", response = { "EmpName:"Test", "EmpID":"1001","address":"Test" }
-    /msg : "input : message = "employee details", Country="US",Location="Test",response = { "EmpName:"Test", "EmpID":"1002","address":"Test" }
-    /msg : "input : message = "employee details",Country="US",Location="Test", response = { "EmpName:"Test", "EmpID":"1003","address":"Test" }
+    /msg : "input : message = "employee details", Country="US",Location="Test", 
+        response = { "EmpName:"Test", "EmpID":"1001","address":"Test" }
+    /msg : "input : message = "employee details", Country="US",Location="Test",
+        response = { "EmpName:"Test", "EmpID":"1002","address":"Test" }
+    /msg : "input : message = "employee details",Country="US",Location="Test", 
+        response = { "EmpName:"Test", "EmpID":"1003","address":"Test" }
 
 
       index=<<search index>> 
