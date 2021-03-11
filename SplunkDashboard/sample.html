@@ -1,0 +1,152 @@
+<form>
+  <label>IDS Record flow</label>
+  <!-- common search -->
+  <search id="baseSearch">
+    <query>
+        
+      </query>
+    <!--<earliest>$timeframe.earliest$</earliest>-->
+    <!--<latest>$timeframe.latest$</latest>-->
+    <!--<refresh>30s</refresh>-->
+  </search>
+  <!-- Records Published to IDS -->
+  <!-- Error -->
+  <!-- Metrics -->
+  <init>
+    <set token="baseQuery">index=$index$ $env$ "Enterprise Marketing"</set>
+    <set token="accountID">$accountID$</set>
+  </init>
+  <fieldset submitButton="false" autoRun="true">
+    <input type="time" token="timeframe">
+      <label></label>
+      <default>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+    <input type="dropdown" token="env">
+      <label>Environment</label>
+      <choice value="AdobeStage">Adobe Stage</choice>
+      <choice value="Adobe-Dev">Adobe Dev</choice>
+      <choice value="Adobe">Adobe</choice>
+      <default>Adobe</default>
+    </input>
+    <input type="dropdown" token="index">
+      <label>Index</label>
+      <choice value="ips_snaplogic_np">Snaplogic Non Prod</choice>
+      <choice value="ips_snaplogic">Snaplogic Prod</choice>
+      <initialValue>ips_snaplogic</initialValue>
+      <default>ips_snaplogic</default>
+    </input>
+    <input type="dropdown" token="source" searchWhenChanged="true">
+      <label>source</label>
+      <choice value="EMP_CONTACT">EMP_CONTACT</choice>
+      <choice value="EMP_ACCOUNT">EMP_ACCOUNT</choice>
+      <choice value="">All</choice>
+      <initialValue></initialValue>
+      <default></default>
+    </input>
+    <input type="text" token="accountID" searchWhenChanged="true">
+      <label>Account ID</label>
+      <default></default>
+      <initialValue></initialValue>
+      <change>
+        <set token="accountID">$accountID$</set>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <title>Records Published to IDS QUEUE</title>
+      <table>
+        <search>
+          <query>$baseQuery$   </query>
+          <earliest>$timeframe.earliest$</earliest>
+          <latest>$timeframe.latest$</latest>
+          <refresh>30s</refresh>
+          <refreshType>delay</refreshType>
+        </search>
+        <option name="count">10</option>
+        <option name="drilldown">row</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="rowNumbers">true</option>
+        <option name="wrap">false</option>
+      </table>
+    </panel>
+    <panel>
+      <title>Records Processed in CRM</title>
+      <table>
+        <search>
+          <query>$baseQuery$  "Employee Created"</query>
+          <earliest>$timeframe.earliest$</earliest>
+          <latest>$timeframe.latest$</latest>
+          <refresh>30s</refresh>
+          <refreshType>delay</refreshType>
+        </search>
+        <option name="count">10</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">cell</option>
+        <option name="rowNumbers">true</option>
+        <option name="wrap">true</option>
+        <drilldown>
+          <set token="accountID">$click.value2$</set>
+        </drilldown>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Error</title>
+      <table>
+        <title>Failures</title>
+        <search>
+          <query>$baseQuery$ </query>
+          <earliest>$timeframe.earliest$</earliest>
+          <latest>$timeframe.latest$</latest>
+          <refresh>30s</refresh>
+        </search>
+        <option name="count">10</option>
+        <option name="dataOverlayMode">heatmap</option>
+        <option name="drilldown">cell</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="rowNumbers">true</option>
+        <format type="color" field="failed_pipeline">
+          <colorPalette type="list">[#53A051,#006D9C,#F8BE34,#F1813F,#DC4E41]</colorPalette>
+          <scale type="threshold">0,30,70,100</scale>
+        </format>
+      </table>
+    </panel>
+    <panel>
+      <title>Import Errors</title>
+      <table>
+        <title>Email Validation Failures</title>
+        <search>
+          <query>$baseQuery$ $source$ </query>
+          <earliest>$timeframe.earliest$</earliest>
+          <latest>$timeframe.latest$</latest>
+          <refresh>30s</refresh>
+        </search>
+        <option name="count">10</option>
+        <option name="drilldown">row</option>
+        <option name="refresh.display">progressbar</option>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <table>
+        <title>Metrics</title>
+        <search>
+          <query>$baseQuery$ </query>
+          <earliest>$timeframe.earliest$</earliest>
+          <latest>$timeframe.latest$</latest>
+          <refresh>30s</refresh>
+          <refreshType>delay</refreshType>
+        </search>
+        <option name="count">10</option>
+        <option name="drilldown">row</option>
+        <option name="refresh.display">progressbar</option>
+        <option name="wrap">false</option>
+      </table>
+    </panel>
+  </row>
+</form>
