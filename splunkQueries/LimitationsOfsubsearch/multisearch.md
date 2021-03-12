@@ -9,6 +9,7 @@ The multisearch command is a generating command that runs multiple streaming sea
 
       | multisearch <subsearch1> <subsearch2> <subsearch3> ...
 
-
-| multisearch [search index=a | eval type = "foo"] [search index=b | eval mytype = "bar"]
+e.g:
+====
+        | multisearch [search index=a | eval type = "foo"] [search index=b | eval mytype = "bar"]
 
