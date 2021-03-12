@@ -12,8 +12,8 @@ The multisearch command is a generating command that runs multiple streaming sea
 Advantage of multisearch:
 ============================
 
-With the multisearch command, the events from each subsearch are interleaved. Therefore the multisearch command is not restricted by the subsearch limitations.
-Unlike the append command, the multisearch command does not run the subsearch to completion first. 
+With the multisearch command, the events from each subsearch are interleaved. **Therefore the multisearch command is not restricted by the subsearch limitations.
+Unlike the append command, the multisearch command does not run the subsearch to completion first**. 
 The following subsearch example with the append command is not the same as using the multisearch command.
 
      index=a | eval type = "foo" | append [search index=b | eval mytype = "bar"]
