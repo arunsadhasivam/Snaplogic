@@ -35,12 +35,15 @@ Note:
     if you use stats that is the response and you cannot process anything after **stats**. but through "**eventstats**" we can process further
     
  
-
+        //add additional layer or add result to newfields 
+        
+        
       <<search-index>> "Logger - Published Message" 
       | eval msgArray = split(msg, ",")
       | eval uniqueId=mvindex(msgArray,2) | eval emp_id = replace(uniqueId, "emp_id=", "")
       | eval source_name=mvindex(msgArray,1)
-      | eventstats min(_time) AS start_time, max(_time) AS end_time by source_name //add additional layer or add result to newfields 
+        
+      | eventstats min(_time) AS start_time, max(_time) AS end_time by source_name //add statistics to new fields start_time,end_time
       | eval start_time =strftime(start_time,"%Y-%m-%d %I:%M:%S.%3N")
       | eval end_time=strftime(end_time,"%Y-%m-%d %I:%M:%S.%3N")
       |table start_time,end_time,emp_id,source_name                           
