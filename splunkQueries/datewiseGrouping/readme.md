@@ -32,7 +32,8 @@ e.g:
 Note:
 ====
     
-    if you use stats that is the response and you cannot process anything after **stats**. but through "**eventstats**" we can process further
+    if you use stats that is the response and you cannot process anything after **stats**. but through "**eventstats**" 
+    we can process further
     
  
         //add additional layer or add result to newfields 
