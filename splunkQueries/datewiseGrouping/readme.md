@@ -24,7 +24,8 @@ value in the field specified in the BY clause.
 e.g:
 =====
 
-      | from [{"age":25, "city": "San Francisco"}, {"age": 39, "city": "Seattle"}, {"age":31, "city": "San Francisco"}, {"city": "Seattle"}]
+      | from [{"age":25, "city": "San Francisco"}, {"age": 39, "city": "Seattle"},
+            {"age":31, "city": "San Francisco"}, {"city": "Seattle"}]
       | streamstats count()
 
 
